@@ -1,0 +1,18 @@
+{
+  "name": "instituto-police-web",
+  "version": "1.0.0",
+  "description": "Web site for Instituto Médio Politecnico Huambo Calunga 4P with user permissions, MySQL connection, and student enrollment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0",
+    "express-session": "^1.17.3",
+    "bcrypt": "^5.1.0",
+    "ejs": "^3.1.9",
+    "connect-flash": "^0.1.1",
+    "body-parser": "^1.20.2"
+  }
+}
