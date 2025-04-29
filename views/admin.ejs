@@ -1,0 +1,47 @@
+<% layout('layout') %>
+
+<h2 class="text-3xl font-semibold mb-6">Painel Administrativo</h2>
+
+<h3 class="text-2xl font-semibold mb-4">Cursos</h3>
+<table class="min-w-full bg-white rounded shadow mb-8">
+  <thead>
+    <tr>
+      <th class="py-2 px-4 border-b">ID</th>
+      <th class="py-2 px-4 border-b">Nome</th>
+      <th class="py-2 px-4 border-b">Descrição</th>
+      <th class="py-2 px-4 border-b">Duração (meses)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% courses.forEach(course => { %>
+      <tr>
+        <td class="border px-4 py-2"><%= course.id %></td>
+        <td class="border px-4 py-2"><%= course.name %></td>
+        <td class="border px-4 py-2"><%= course.description %></td>
+        <td class="border px-4 py-2"><%= course.duration %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<h3 class="text-2xl font-semibold mb-4">Matrículas</h3>
+<table class="min-w-full bg-white rounded shadow">
+  <thead>
+    <tr>
+      <th class="py-2 px-4 border-b">ID</th>
+      <th class="py-2 px-4 border-b">Aluno</th>
+      <th class="py-2 px-4 border-b">Curso</th>
+      <th class="py-2 px-4 border-b">Data de Matrícula</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% enrollments.forEach(enroll => { %>
+      <tr>
+        <td class="border px-4 py-2"><%= enroll.id %></td>
+        <td class="border px-4 py-2"><%= enroll.username %></td>
+        <td class="border px-4 py-2"><%= enroll.course_name %></td>
+        <td class="border px-4 py-2"><%= enroll.enrolled_at.toLocaleDateString() %></td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
